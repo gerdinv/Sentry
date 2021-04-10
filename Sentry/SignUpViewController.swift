@@ -26,7 +26,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     func selectedHeight(height: CGFloat, unit: HeightUnit) {
         print(height, unit)
     }
-    
 
     @IBOutlet weak var eyeColorDropDown: DropDown!
     @IBOutlet weak var hairColorDrowDown: DropDown!
@@ -56,9 +55,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         let user = PFUser()
         let imageData = profileImage.image?.pngData()
         let imageFile = PFFileObject(data: imageData!)
-        
-        
-        print(eyeColorDropDown.text!)
         
         user.email = emailTextField.text!
         user.password = passwordTextField.text!
