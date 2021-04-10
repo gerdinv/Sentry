@@ -69,14 +69,41 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.contactImage.clipsToBounds = true
         
          
-        cell.contentView.backgroundColor = UIColor.blue
-        
-        
-        
+//        cell.contentView.backgroundColor = UIColor.blue
         return cell
     }
-    
 
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = deleteContact(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [delete])
+    }
+    
+    func deleteContact(at indexPath: IndexPath) -> UIContextualAction{
+
+//  Get comment and user
+        let contact = self.contacts[indexPath.row]
+        let objectId = contact.objectId
+
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
+            let query = PFQuery(className:"Contacts")
+            query.whereKey("objectId", equalTo:objectId!)
+            query.limit = 1
+            query.findObjectsInBackground { (contactToDelete: [PFObject]?, error) in
+                if contactToDelete != nil {
+                    for contact in contactToDelete! {
+                        contact.deleteInBackground()
+                        self.contacts.remove(at: indexPath.row)
+                        self.tableView.deleteRows(at: [indexPath], with: .fade)
+                        print("deleted")
+                    }
+                }
+            }
+            self.tableView.reloadData()
+            completion(true)
+        }
+        return action
+    }
     /*
     // MARK: - Navigation
 
