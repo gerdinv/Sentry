@@ -7,10 +7,12 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    
     
     var contacts = [PFObject]()
     
@@ -19,6 +21,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         loadContacts()
+        self.tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,7 +32,6 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func loadContacts() {
         let query = PFQuery(className:"Contacts")
-//        query.includeKeys(["fullname", "email","phonenumber", "image"])
         query.order(byAscending: "fullname")
                 
         query.findObjectsInBackground { (contacts, error) in
@@ -47,10 +49,29 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell") as! ContactCell
+        let contact = contacts[indexPath.row]
+        
+//      Get post image
+        let imageFile = contact["image"] as! PFFileObject
+        let imageFileUrl = imageFile.url!
+        let imageUrl = URL(string: imageFileUrl)
+        
+//      Update screen elements
+        cell.nameLabel.text = contact["fullname"] as? String
+        cell.emailLabel.text = contact["email"] as? String
+        cell.relationshipLabel.text = contact["relationship"] as? String
+        cell.phoneNumberLabel.text = contact["phonenumber"] as? String
+        cell.contactImage.af.setImage(withURL: imageUrl!)
+        
+//      Makes profile picture round
+        cell.contactImage.layer.cornerRadius = cell.contactImage.frame.size.width / 2
+        cell.contactImage.clipsToBounds = true
+        
          
-        cell.contentView.backgroundColor = UIColor.yellow
-        cell.textLabel!.text = "row: \(indexPath.row)"
+        cell.contentView.backgroundColor = UIColor.blue
+        
+        
         
         return cell
     }

@@ -20,6 +20,7 @@
 		0BAA2E602621BA28002B7272 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA2E5F2621BA28002B7272 /* ContactsViewController.swift */; };
 		0BAA2E632621C09D002B7272 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA2E622621C09D002B7272 /* AddContactViewController.swift */; };
 		0BAA2E662621D3D2002B7272 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA2E652621D3D2002B7272 /* UpdateProfileViewController.swift */; };
+		0BAA2E692621DAB8002B7272 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA2E682621DAB8002B7272 /* ContactCell.swift */; };
 		F0C9ED764B9D5B1639566AB0 /* Pods_Sentry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4524B2D605D65B7F508E00 /* Pods_Sentry.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		0BAA2E5F2621BA28002B7272 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		0BAA2E622621C09D002B7272 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		0BAA2E652621D3D2002B7272 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
+		0BAA2E682621DAB8002B7272 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		228F7B017861F4E324B56946 /* Pods-Sentry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentry.debug.xcconfig"; path = "Target Support Files/Pods-Sentry/Pods-Sentry.debug.xcconfig"; sourceTree = "<group>"; };
 		9B4524B2D605D65B7F508E00 /* Pods_Sentry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sentry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31DF21B7B50C2D3E247800B /* Pods-Sentry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentry.release.xcconfig"; path = "Target Support Files/Pods-Sentry/Pods-Sentry.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				0BAA2E5F2621BA28002B7272 /* ContactsViewController.swift */,
 				0BAA2E622621C09D002B7272 /* AddContactViewController.swift */,
 				0BAA2E652621D3D2002B7272 /* UpdateProfileViewController.swift */,
+				0BAA2E682621DAB8002B7272 /* ContactCell.swift */,
 			);
 			path = Sentry;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BAA2E692621DAB8002B7272 /* ContactCell.swift in Sources */,
 				0BAA2E4D26218CDC002B7272 /* YTHeightPicker.swift in Sources */,
 				0BAA2E602621BA28002B7272 /* ContactsViewController.swift in Sources */,
 				0BAA2E5026218E31002B7272 /* CompleteSignUpViewController.swift in Sources */,
