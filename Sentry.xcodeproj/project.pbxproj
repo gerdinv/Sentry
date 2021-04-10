@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0B1785EE26214C97004362FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1785ED26214C97004362FD /* AppDelegate.swift */; };
 		0B1785F026214C97004362FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1785EF26214C97004362FD /* SceneDelegate.swift */; };
-		0B1785F226214C97004362FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1785F126214C97004362FD /* ViewController.swift */; };
 		0B1785F526214C97004362FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1785F326214C97004362FD /* Main.storyboard */; };
 		0B1785F726214C98004362FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1785F626214C98004362FD /* Assets.xcassets */; };
 		0B1785FA26214C98004362FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1785F826214C98004362FD /* LaunchScreen.storyboard */; };
+		0B17860B262150BD004362FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17860A262150BD004362FD /* LoginViewController.swift */; };
+		0B6DE31626215467007F5B3B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6DE31526215467007F5B3B /* SignUpViewController.swift */; };
+		0B6DE32126215BD3007F5B3B /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6DE32026215BD3007F5B3B /* iOSDropDown.framework */; };
+		0BAA2E4D26218CDC002B7272 /* YTHeightPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA2E4C26218CDC002B7272 /* YTHeightPicker.swift */; };
+		0BAA2E5026218E31002B7272 /* CompleteSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA2E4F26218E31002B7272 /* CompleteSignUpViewController.swift */; };
 		F0C9ED764B9D5B1639566AB0 /* Pods_Sentry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4524B2D605D65B7F508E00 /* Pods_Sentry.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +24,15 @@
 		0B1785EA26214C97004362FD /* Sentry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sentry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1785ED26214C97004362FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B1785EF26214C97004362FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B1785F126214C97004362FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B1785F426214C97004362FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B1785F626214C98004362FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B1785F926214C98004362FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B1785FB26214C98004362FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B17860A262150BD004362FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0B6DE31526215467007F5B3B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0B6DE32026215BD3007F5B3B /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BAA2E4C26218CDC002B7272 /* YTHeightPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTHeightPicker.swift; sourceTree = "<group>"; };
+		0BAA2E4F26218E31002B7272 /* CompleteSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpViewController.swift; sourceTree = "<group>"; };
 		228F7B017861F4E324B56946 /* Pods-Sentry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentry.debug.xcconfig"; path = "Target Support Files/Pods-Sentry/Pods-Sentry.debug.xcconfig"; sourceTree = "<group>"; };
 		9B4524B2D605D65B7F508E00 /* Pods_Sentry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sentry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31DF21B7B50C2D3E247800B /* Pods-Sentry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentry.release.xcconfig"; path = "Target Support Files/Pods-Sentry/Pods-Sentry.release.xcconfig"; sourceTree = "<group>"; };
@@ -36,6 +44,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C9ED764B9D5B1639566AB0 /* Pods_Sentry.framework in Frameworks */,
+				0B6DE32126215BD3007F5B3B /* iOSDropDown.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,11 +74,14 @@
 			children = (
 				0B1785ED26214C97004362FD /* AppDelegate.swift */,
 				0B1785EF26214C97004362FD /* SceneDelegate.swift */,
-				0B1785F126214C97004362FD /* ViewController.swift */,
 				0B1785F326214C97004362FD /* Main.storyboard */,
+				0B17860A262150BD004362FD /* LoginViewController.swift */,
 				0B1785F626214C98004362FD /* Assets.xcassets */,
 				0B1785F826214C98004362FD /* LaunchScreen.storyboard */,
 				0B1785FB26214C98004362FD /* Info.plist */,
+				0B6DE31526215467007F5B3B /* SignUpViewController.swift */,
+				0BAA2E4C26218CDC002B7272 /* YTHeightPicker.swift */,
+				0BAA2E4F26218E31002B7272 /* CompleteSignUpViewController.swift */,
 			);
 			path = Sentry;
 			sourceTree = "<group>";
@@ -80,13 +92,13 @@
 				228F7B017861F4E324B56946 /* Pods-Sentry.debug.xcconfig */,
 				F31DF21B7B50C2D3E247800B /* Pods-Sentry.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		BADC01D142788FD153AF1C02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B6DE32026215BD3007F5B3B /* iOSDropDown.framework */,
 				9B4524B2D605D65B7F508E00 /* Pods_Sentry.framework */,
 			);
 			name = Frameworks;
@@ -101,8 +113,8 @@
 			buildPhases = (
 				C4004136C87776EEB0BA2B4B /* [CP] Check Pods Manifest.lock */,
 				0B1785E626214C97004362FD /* Sources */,
-				0B1785E726214C97004362FD /* Frameworks */,
 				0B1785E826214C97004362FD /* Resources */,
+				0B1785E726214C97004362FD /* Frameworks */,
 				FD35AAEE6741C404473CDDFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -206,8 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B1785F226214C97004362FD /* ViewController.swift in Sources */,
+				0BAA2E4D26218CDC002B7272 /* YTHeightPicker.swift in Sources */,
+				0BAA2E5026218E31002B7272 /* CompleteSignUpViewController.swift in Sources */,
+				0B17860B262150BD004362FD /* LoginViewController.swift in Sources */,
 				0B1785EE26214C97004362FD /* AppDelegate.swift in Sources */,
+				0B6DE31626215467007F5B3B /* SignUpViewController.swift in Sources */,
 				0B1785F026214C97004362FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RJGU8HFWK;
 				INFOPLIST_FILE = Sentry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,6 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RJGU8HFWK;
 				INFOPLIST_FILE = Sentry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

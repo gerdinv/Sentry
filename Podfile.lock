@@ -1,30 +1,38 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.7.1)
   - Alamofire (5.4.1)
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
   - Bolts/Tasks (1.9.1)
+  - iOSDropDown (0.3.4)
   - Parse (1.19.2):
     - Parse/Core (= 1.19.2)
   - Parse/Core (1.19.2):
     - Bolts/Tasks (= 1.9.1)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - AlamofireImage
+  - iOSDropDown
   - Parse
 
 SPEC REPOS:
   trunk:
+    - ActionSheetPicker-3.0
     - Alamofire
     - AlamofireImage
     - Bolts
+    - iOSDropDown
     - Parse
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 36da254b97a09ff89679ecb8b8510bd3e5bdc773
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   Parse: 081fb8755c3000fd11df817eec235def233d0af3
 
-PODFILE CHECKSUM: a1ca1f0911032f23294780c9819ee2179ce0e350
+PODFILE CHECKSUM: 3b28aae514e84b6ff6cb42ef10439d43418d99cc
 
 COCOAPODS: 1.10.1
