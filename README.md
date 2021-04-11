@@ -108,4 +108,4 @@ Armando Taveras - [@linkedin](https://www.linkedin.com/in/armando-taveras-047312
 <br />
 Tony Che - [@linkedin](https://www.linkedin.com/in/tony-ch%C3%A9-b59624202/) - t_che@outlook.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/gerdinv/Sentry](https://github.com/gerdinv/Sentry)
