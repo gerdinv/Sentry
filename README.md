@@ -45,6 +45,8 @@ BIT CAMP 2021
 ## About The Project
 Sentry is an app that uses the Courier API to send texts to a designated list of emergency contacts created by the user. Sentry uses Swift’s long tap gesture as a way to indicate when the user is in danger. Once the user releases the sentry button a timer is activated. The timer serves as an indicator of when emergency services will be notified.
 
+<img src='https://gyazo.com/9a9d09705b089537b4d58e8740dfb962' title='Sreenshot' width='' />
+
 
 ### Inspiration
 We noticed a lack of applications that utilized a phone’s capabilities in geolocation and communication software in a manner that protects the phone user in dangerous situations. We aimed to make an app that utilizes this software to give people a sense of security.
