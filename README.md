@@ -9,6 +9,7 @@
 
   <p align="center">
     The Sentry app is an ios app which provides the user with a sense of security as well as a safe and efficient way to contact emergency services.
+    Sentry - Stationed to keep watch
     <br />
   </p>
 </p>
