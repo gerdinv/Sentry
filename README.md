@@ -8,13 +8,8 @@
   <h3 align="center">Sentry</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    The Sentry app is an ios app which provides the user with a sense of security as well as a safe and efficient way to contact emergency services.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
   </p>
 </p>
 
