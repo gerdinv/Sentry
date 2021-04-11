@@ -39,7 +39,7 @@ class CompleteSignUpViewController: UIViewController, TYHeightPickerDelegate {
         let user = PFUser.current()
         user!["height"] = self.height
         user!.saveEventually()
-        self.performSegue(withIdentifier: "homeScreenFromHeight", sender: nil)
+        self.performSegue(withIdentifier: "passcodeScreenFromHeight", sender: nil)
         print("Height updated!")
     }
 }

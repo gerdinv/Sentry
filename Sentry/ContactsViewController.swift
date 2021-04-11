@@ -32,6 +32,8 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func loadContacts() {
         let query = PFQuery(className:"Contacts")
+        query.includeKey("owner")
+        query.whereKey("owner", equalTo: PFUser.current()!)
         query.order(byAscending: "fullname")
                 
         query.findObjectsInBackground { (contacts, error) in

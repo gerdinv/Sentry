@@ -23,6 +23,7 @@
 		0BAA2E692621DAB8002B7272 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA2E682621DAB8002B7272 /* ContactCell.swift */; };
 		0BAA2E6C26224C40002B7272 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA2E6B26224C40002B7272 /* HomeViewController.swift */; };
 		0BAA2E81262286FE002B7272 /* CancelCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA2E80262286FE002B7272 /* CancelCallViewController.swift */; };
+		0BAA2E8426228A35002B7272 /* NumberPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA2E8326228A35002B7272 /* NumberPasswordViewController.swift */; };
 		F0C9ED764B9D5B1639566AB0 /* Pods_Sentry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4524B2D605D65B7F508E00 /* Pods_Sentry.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		0BAA2E682621DAB8002B7272 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		0BAA2E6B26224C40002B7272 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0BAA2E80262286FE002B7272 /* CancelCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelCallViewController.swift; sourceTree = "<group>"; };
+		0BAA2E8326228A35002B7272 /* NumberPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPasswordViewController.swift; sourceTree = "<group>"; };
 		228F7B017861F4E324B56946 /* Pods-Sentry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentry.debug.xcconfig"; path = "Target Support Files/Pods-Sentry/Pods-Sentry.debug.xcconfig"; sourceTree = "<group>"; };
 		9B4524B2D605D65B7F508E00 /* Pods_Sentry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sentry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31DF21B7B50C2D3E247800B /* Pods-Sentry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sentry.release.xcconfig"; path = "Target Support Files/Pods-Sentry/Pods-Sentry.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				0BAA2E682621DAB8002B7272 /* ContactCell.swift */,
 				0BAA2E6B26224C40002B7272 /* HomeViewController.swift */,
 				0BAA2E80262286FE002B7272 /* CancelCallViewController.swift */,
+				0BAA2E8326228A35002B7272 /* NumberPasswordViewController.swift */,
 			);
 			path = Sentry;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				0B17860B262150BD004362FD /* LoginViewController.swift in Sources */,
 				0BAA2E81262286FE002B7272 /* CancelCallViewController.swift in Sources */,
 				0B1785EE26214C97004362FD /* AppDelegate.swift in Sources */,
+				0BAA2E8426228A35002B7272 /* NumberPasswordViewController.swift in Sources */,
 				0BAA2E6C26224C40002B7272 /* HomeViewController.swift in Sources */,
 				0BAA2E632621C09D002B7272 /* AddContactViewController.swift in Sources */,
 				0B6DE31626215467007F5B3B /* SignUpViewController.swift in Sources */,
