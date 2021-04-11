@@ -67,6 +67,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         user["profileImage"] = imageFile
         user["height"] = 50
         user["passcode"] = 000000
+        user["timer"] = 20
         
         user.signUpInBackground {
             (succeeded: Bool, error: Error?) -> Void in

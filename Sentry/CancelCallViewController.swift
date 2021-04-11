@@ -24,7 +24,7 @@ class CancelCallViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        getAddressFromLatLon(pdblLatitude: lati, withLongitude: long)
+        print(addressText)
     }
     
     @IBAction func onCancelCall(_ sender: Any) {
@@ -57,41 +57,4 @@ class CancelCallViewController: UIViewController {
     func changeScreen(alert: UIAlertAction!) {
         self.performSegue(withIdentifier: "backToHomeFromCancel", sender: nil)
     }
-
-    func getAddressFromLatLon(pdblLatitude: String, withLongitude pdblLongitude: String) {
-        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
-        let ceo: CLGeocoder = CLGeocoder()
-        center.latitude = Double(self.lati)!
-        center.longitude = Double(self.long)!
-        
-        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
-
-        ceo.reverseGeocodeLocation(loc, completionHandler:
-            {(placemarks, error) in
-                if (error != nil) {
-                    print("reverse geodcode fail: \(error!.localizedDescription)")
-                }
-                let pm = placemarks! as [CLPlacemark]
-                if pm.count >= 0 {
-                    let pm = placemarks![0]
-                    var newAddress = ""
-                    if pm.subLocality != nil {
-                        newAddress += pm.subThoroughfare! + " "
-                    }
-                    if pm.thoroughfare != nil {
-                        newAddress += pm.thoroughfare! + ", "
-                    }
-                    if pm.locality != nil {
-                        newAddress += pm.locality! + ", "
-                    }
-                    if pm.country != nil {
-                        newAddress += pm.country! + ", "
-                    }
-                    if pm.postalCode != nil {
-                        newAddress += pm.postalCode! + " "
-                    }
-                        self.addressText = newAddress
-                  }
-            })
-        }
 }

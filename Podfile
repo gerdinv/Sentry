@@ -12,5 +12,6 @@ target 'Sentry' do
     pod 'iOSDropDown'
     pod 'ActionSheetPicker-3.0'
     pod 'MaterialComponents/Buttons'
+    pod 'Alamofire'
 
 end
