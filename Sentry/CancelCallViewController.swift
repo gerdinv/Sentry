@@ -11,16 +11,20 @@ import Parse
 class CancelCallViewController: UIViewController {
 
     @IBOutlet weak var triesCounterLabel: UILabel!
-   
-    
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var addressText = String()
+    var lati = String()
+    var long = String()
+    var coordinateText = String()
+    
     
     var triesCounter = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        // Do any additional setup after loading the view.
+        getAddressFromLatLon(pdblLatitude: lati, withLongitude: long)
     }
     
     @IBAction func onCancelCall(_ sender: Any) {
@@ -40,12 +44,12 @@ class CancelCallViewController: UIViewController {
         if passcode == passwordTextField.text {
             triesCounter = 3
             self.performSegue(withIdentifier: "backToHomeFromCancel", sender: nil)
-
         } else {
             triesCounter -= 1
         }
         
-        
+        print(addressText)
+        print(coordinateText)
         print(passcode)
         triesCounterLabel.text = "\(triesCounter)"
     }
@@ -54,15 +58,40 @@ class CancelCallViewController: UIViewController {
         self.performSegue(withIdentifier: "backToHomeFromCancel", sender: nil)
     }
 
-    
-    /*
-    // MARK: - Navigation
+    func getAddressFromLatLon(pdblLatitude: String, withLongitude pdblLongitude: String) {
+        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+        let ceo: CLGeocoder = CLGeocoder()
+        center.latitude = Double(self.lati)!
+        center.longitude = Double(self.long)!
+        
+        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        ceo.reverseGeocodeLocation(loc, completionHandler:
+            {(placemarks, error) in
+                if (error != nil) {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                }
+                let pm = placemarks! as [CLPlacemark]
+                if pm.count >= 0 {
+                    let pm = placemarks![0]
+                    var newAddress = ""
+                    if pm.subLocality != nil {
+                        newAddress += pm.subThoroughfare! + " "
+                    }
+                    if pm.thoroughfare != nil {
+                        newAddress += pm.thoroughfare! + ", "
+                    }
+                    if pm.locality != nil {
+                        newAddress += pm.locality! + ", "
+                    }
+                    if pm.country != nil {
+                        newAddress += pm.country! + ", "
+                    }
+                    if pm.postalCode != nil {
+                        newAddress += pm.postalCode! + " "
+                    }
+                        self.addressText = newAddress
+                  }
+            })
+        }
 }

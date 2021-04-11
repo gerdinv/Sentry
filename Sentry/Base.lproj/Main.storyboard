@@ -517,16 +517,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZG-Dv-sdw">
-                                <rect key="frame" x="98" y="730" width="218" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onClick:" destination="Qzo-G4-UBq" eventType="touchUpInside" id="IXE-dg-eSH"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ER-KY-bmH">
                                 <rect key="frame" x="90" y="294" width="234" height="308"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -561,7 +551,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wF3-pi-9hM" kind="presentation" modalPresentationStyle="fullScreen" id="erI-al-P3W"/>
+                                    <segue destination="wF3-pi-9hM" kind="presentation" identifier="cancelCallSegue" modalPresentationStyle="fullScreen" id="erI-al-P3W"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -662,7 +652,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RgC-5f-JTY"/>
+        <segue reference="erI-al-P3W"/>
+        <segue reference="WYl-kl-jNG"/>
         <segue reference="zX3-wg-81b"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -14,12 +14,10 @@ import Parse
 class HomeViewController: UIViewController, CLLocationManagerDelegate  {
 
     @IBOutlet weak var sentryButton: UIButton!
-    
     @IBOutlet weak var secondsLabel: UILabel!
-    
     @IBOutlet weak var dangerLabel: UILabel!
-    
     @IBOutlet weak var locationLabel: UILabel!
+    
     var manager = CLLocationManager()
     var longitude = ""
     var latitude = ""
@@ -76,12 +74,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate  {
             
             runTimer()
             updateTimer()
-            
             print("CONTACTS NOTIFIED!!!!")
-//            labelOne.text = "EMERGENCY CONTACTS NOTIFIED!!!!"
-            
             print("UIGestureRecognizerStateEnded")
-            //Do Whatever You want on End of Gesture
         }
         else if sender.state == .began {
             print("UIGestureRecognizerStateBegan.")
@@ -97,83 +91,23 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate  {
         view.addSubview(button)
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//    }
-    
-    func getAddressFromLatLon(pdblLatitude: String, withLongitude pdblLongitude: String) {
-        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
-        let ceo: CLGeocoder = CLGeocoder()
-        center.latitude = Double(latitude)!
-        center.longitude = Double(longitude)!
-        
-        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
-
-        ceo.reverseGeocodeLocation(loc, completionHandler:
-            {(placemarks, error) in
-                if (error != nil) {
-                    print("reverse geodcode fail: \(error!.localizedDescription)")
-                }
-                let pm = placemarks! as [CLPlacemark]
-                if pm.count >= 0 {
-                    let pm = placemarks![0]
-                    var newAddress = ""
-                    if pm.subLocality != nil {
-                        newAddress += pm.subThoroughfare! + " "
-                    }
-                    if pm.thoroughfare != nil {
-                        newAddress += pm.thoroughfare! + ", "
-                    }
-                    if pm.locality != nil {
-                        newAddress += pm.locality! + ", "
-                    }
-                    if pm.country != nil {
-                        newAddress += pm.country! + ", "
-                    }
-                    if pm.postalCode != nil {
-                        newAddress += pm.postalCode! + " "
-                    }
-//                        print(newAddress)
-                        self.addressString = newAddress
-//                        print(self.addressString)
-                  }
-//                    print(self.addressString)
-            })
-        }
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let first = locations.first else {
             return
         }
-//        first.timestamp
-        locationLabel.text = "\(first.coordinate.longitude) | \(first.coordinate.latitude)"
         longitude = "\(first.coordinate.longitude)"
         latitude = "\(first.coordinate.latitude)"
+        coordinate = "\(latitude),\(longitude)"
+        locationLabel.text = coordinate
     }
     
-
-    
-    @IBAction func onClick(_ sender: Any) {
-        print(longitude)
-        print(latitude)
-        self.getAddressFromLatLon(pdblLatitude: self.latitude, withLongitude: self.longitude)
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15, execute: {
-            print(self.addressString)
-        })
-        let user = PFUser.current()!
-//        let password = user.password!
-        print(user)
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "cancelCallSegue" {
+            let destination = segue.destination as! CancelCallViewController
+            destination.addressText = self.addressString
+            destination.coordinateText = self.coordinate
+            destination.lati = self.latitude
+            destination.long = self.longitude
+        }
     }
-    */
-
 }
