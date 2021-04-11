@@ -28,6 +28,7 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
         contactImage.layer.cornerRadius = contactImage.frame.size.width / 2
         contactImage.clipsToBounds = true
         addContactButton.layer.cornerRadius = 8
+        updateLabelPlaceholders()
         // Do any additional setup after loading the view.
     }
     

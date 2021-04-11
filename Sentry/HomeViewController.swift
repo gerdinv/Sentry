@@ -57,7 +57,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate  {
             if contacts != nil {
                 
                 for contact in contacts! {
-                    let contactNumber = "240-370-6534" //Replace with contact["phonenumber"]
+                    let contactNumber = "240-355-1746" //Replace with contact["phonenumber"]
                     let contactEmail = "agprxme@gmail.com" //Replace with contact["email"]
                     let contactName = contact["fullname"] as! String
                     let userFullname = user["fullname"] as! String

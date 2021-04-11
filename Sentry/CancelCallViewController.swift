@@ -45,11 +45,8 @@ class CancelCallViewController: UIViewController {
             let alert = UIAlertController(title: "Help Request Sent!", message: "Everyone on your emergency contact list as well as the authorities have been notified with your details. Help is on the way!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "dismiss", style: .default, handler: changeScreen))
             self.present(alert, animated: true)
-            print("help is on the way")
+            
         }
-        
-        print(passcode)
-        print(passwordTextField.text!)
         
         if passcode == passwordTextField.text {
             triesCounter = 3
@@ -71,7 +68,7 @@ class CancelCallViewController: UIViewController {
         query.findObjectsInBackground { (contacts: [PFObject]?, error) in
             if contacts != nil {
                 for contact in contacts! {
-                    let contactNumber = "240-370-6534" //Replace with contact["phonenumber"]
+                    let contactNumber = "240-355-1746" //Replace with contact["phonenumber"]
                     let contactEmail = "agprxme@gmail.com" //Replace with contact["email"]
                     let contactName = contact["fullname"] as! String
                     let userFullname = user["fullname"] as! String
