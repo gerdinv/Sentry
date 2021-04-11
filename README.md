@@ -54,12 +54,12 @@ Sentry is an app that uses the Courier API to send texts to a designated list of
 We noticed a lack of applications that utilized a phone’s capabilities in geolocation and communication software in a manner that protects the phone user in dangerous situations. We aimed to make an app that utilizes this software to give people a sense of security.
 
 
-What we learned:
+###What we learned:
 * Technologies such as Geotechnologies and Courier
 * How to connect a JS backend to a Swift application
 * Collaborating on tasks help us get more work done
 
-Challenges:
+###Challenges:
 * Connecting to the backend to the Swift application.
 * Geodecoding map values to produce a valid readable street address
 
@@ -103,7 +103,9 @@ Use this space to show useful examples of how a project can be used. Additional 
 ## Contact
 
 Gerdin Ventura - [@linkedin](https://www.linkedin.com/in/gerdin-ventura-croussett-2b28081a3/) - gerdinventuraedu@gmail.com
+<br />
 Armando Taveras - [@linkedin](https://www.linkedin.com/in/armando-taveras-04731216a/) - armandogtaveras@gmail.com
+<br />
 Tony Che - [@linkedin](https://www.linkedin.com/in/tony-ch%C3%A9-b59624202/) - t_che@outlook.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
