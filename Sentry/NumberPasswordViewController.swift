@@ -11,11 +11,17 @@ import Parse
 class NumberPasswordViewController: UIViewController {
 
     @IBOutlet weak var passcodeTextField: UITextField!
+    @IBOutlet weak var finishButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        // Do any additional setup after loading the view.
+        finishButton.layer.cornerRadius = 8
+        
+        let passcode = NSAttributedString(string: "Passcode",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        passcodeTextField.attributedPlaceholder = passcode
+       
     }
     
     @IBAction func onFinish(_ sender: Any) {

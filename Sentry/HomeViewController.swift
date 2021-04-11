@@ -15,6 +15,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate  {
 
     @IBOutlet weak var sentryButton: UIButton!
     @IBOutlet weak var secondsLabel: UILabel!
+    @IBOutlet weak var cancelButton: UIButton!
     
     var timer = Timer()
     var manager = CLLocationManager()
@@ -34,11 +35,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate  {
         
         sentryButton.layer.cornerRadius = sentryButton.frame.width / 2
         sentryButton.layer.masksToBounds = true
+        cancelButton.layer.cornerRadius = 8
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let user = PFUser.current()!
-        seconds = user["timer"] as! Int
+        let user = PFUser.current()
+        seconds = user?["timer"] as! Int
         secondsLabel.text = "\(seconds)"
         getAddressFromLatLon(pdblLatitude: self.latitude, withLongitude: self.longitude)
     }

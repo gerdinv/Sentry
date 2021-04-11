@@ -19,6 +19,7 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var contactImage: UIImageView!
     @IBOutlet weak var relationshipTextField: DropDown!
+    @IBOutlet weak var addContactButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
         initalizeRelationshipDD()
         contactImage.layer.cornerRadius = contactImage.frame.size.width / 2
         contactImage.clipsToBounds = true
-
+        addContactButton.layer.cornerRadius = 8
         // Do any additional setup after loading the view.
     }
     
@@ -52,6 +53,27 @@ class AddContactViewController: UIViewController, UIImagePickerControllerDelegat
                 print("Error saving contact: \(String(describing: error))")
             }
         }
+    }
+    
+    func updateLabelPlaceholders() {
+        let fullname = NSAttributedString(string: "Fullname",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        fullNameTextField.attributedPlaceholder = fullname
+        
+        let email = NSAttributedString(string: "Email",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        emailTextField.attributedPlaceholder = email
+        
+        
+        let phone = NSAttributedString(string: "Phone Number",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        phoneNumberTextField.attributedPlaceholder = phone
+        
+        let relationship = NSAttributedString(string: "Relationship",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        relationshipTextField.attributedPlaceholder = relationship
+        
+
     }
     
     func initalizeRelationshipDD() {

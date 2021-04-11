@@ -34,7 +34,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var fullnameTextField: UITextField!
-
+    @IBOutlet weak var signUpButton: UIButton!
+    
     
     var gender = ""
     
@@ -47,7 +48,38 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         hideKeyboardWhenTappedAround()
         profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
         profileImage.clipsToBounds = true
+        signUpButton.layer.cornerRadius = 8
+        updateLabelPlaceholders()
+        navigationController?.navigationBar.barTintColor = UIColor.white
+    
     }
+    
+    func updateLabelPlaceholders() {
+        let fullname = NSAttributedString(string: "Fullname",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        fullnameTextField.attributedPlaceholder = fullname
+        
+        let email = NSAttributedString(string: "Email",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        emailTextField.attributedPlaceholder = email
+        
+        let password = NSAttributedString(string: "Password",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        passwordTextField.attributedPlaceholder = password
+        
+        let fulladdress = NSAttributedString(string: "Full Address",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        addressTextField.attributedPlaceholder = fulladdress
+        
+        let eyeColor = NSAttributedString(string: "Eye Color",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        eyeColorDropDown.attributedPlaceholder = eyeColor
+        
+        let hairColor = NSAttributedString(string: "Hair Color",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        hairColorDrowDown.attributedPlaceholder = hairColor
+    }
+ 
     
     
     
@@ -126,30 +158,4 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         profileImage.image = scaledImage
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    @IBAction func onPrint(_ sender: Any) {
-        print("Fullname: " + fullnameTextField.text!)
-        print("Email: " + emailTextField.text!)
-        print("Password: " + passwordTextField.text!)
-        print("Gender: " + gender)
-        print("Eye color: " + eyeColorDropDown.text!)
-        print("Hair color: " + hairColorDrowDown.text!)
-    }
-    
-//    @IBAction func onBack(_ sender: Any) {
-//        self.dismiss(animated: true, completion: nil)
-//    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

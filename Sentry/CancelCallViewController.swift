@@ -13,6 +13,7 @@ class CancelCallViewController: UIViewController {
 
     @IBOutlet weak var triesCounterLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var cancelButton: UIButton!
     
     var addressText = String()
     var lati = String()
@@ -26,6 +27,11 @@ class CancelCallViewController: UIViewController {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
         print(addressText)
+        cancelButton.layer.cornerRadius = 8
+        
+        let password = NSAttributedString(string: "Password",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        passwordTextField.attributedPlaceholder = password
     }
     
     @IBAction func onCancelCall(_ sender: Any) {

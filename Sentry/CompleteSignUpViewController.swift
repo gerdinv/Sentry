@@ -12,15 +12,16 @@ class CompleteSignUpViewController: UIViewController, TYHeightPickerDelegate {
     
     func selectedHeight(height: CGFloat, unit: HeightUnit) {
         self.height = Int(height)
-        print(height, unit)
     }
 
     var heighPicker: TYHeightPicker!
+    @IBOutlet weak var continueButton: UIButton!
     var height = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTYHeightPicker()
+        continueButton.layer.cornerRadius = 8
     }
     
     func setupTYHeightPicker() {
@@ -40,6 +41,5 @@ class CompleteSignUpViewController: UIViewController, TYHeightPickerDelegate {
         user!["height"] = self.height
         user!.saveEventually()
         self.performSegue(withIdentifier: "passcodeScreenFromHeight", sender: nil)
-        print("Height updated!")
     }
 }
