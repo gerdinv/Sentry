@@ -510,13 +510,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWV-Ll-N73">
-                                <rect key="frame" x="52" y="72" width="311" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TuX-SL-gRc">
                                 <rect key="frame" x="132" y="131" width="151" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -524,19 +517,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skf-bq-wFN">
-                                <rect key="frame" x="90" y="737" width="234" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" systemColor="linkColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSendRequest:" destination="Qzo-G4-UBq" eventType="touchUpInside" id="WHl-B9-2b1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ER-KY-bmH">
-                                <rect key="frame" x="90" y="252" width="234" height="308"/>
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
@@ -548,7 +530,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9M-Ly-7Y6">
-                                <rect key="frame" x="90" y="596" width="234" height="48"/>
+                                <rect key="frame" x="90" y="620" width="234" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.69955301280000004" green="0.080571360889999999" blue="0.043023437259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Cancel Call">
@@ -564,7 +546,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="7Qd-I6-xXb"/>
                     <connections>
-                        <outlet property="locationLabel" destination="YWV-Ll-N73" id="5gU-q8-oz5"/>
                         <outlet property="secondsLabel" destination="TuX-SL-gRc" id="GAB-uh-HbL"/>
                         <outlet property="sentryButton" destination="6ER-KY-bmH" id="4ES-bu-g9Q"/>
                     </connections>
@@ -576,7 +557,7 @@
         <!--Cancel Call View Controller-->
         <scene sceneID="Nwc-kD-S0l">
             <objects>
-                <viewController id="wF3-pi-9hM" customClass="CancelCallViewController" customModule="Sentry" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="wF3-pi-9hM" customClass="CancelCallViewController" customModule="Sentry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="afh-xe-wNx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -627,7 +608,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="KTV-T2-qIW" id="kbN-e1-VFl"/>
                         <outlet property="triesCounterLabel" destination="rAy-lH-IpM" id="Toc-L0-F3Q"/>
-                        <segue destination="Qzo-G4-UBq" kind="presentation" identifier="backToHomeFromCancel" id="zX3-wg-81b"/>
+                        <segue destination="PUb-4U-oMa" kind="presentation" identifier="backToHomeFromCancel" id="XO3-nR-JZB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEX-xj-vgm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -655,8 +636,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WYl-kl-jNG"/>
-        <segue reference="zX3-wg-81b"/>
+        <segue reference="erI-al-P3W"/>
+        <segue reference="XO3-nR-JZB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="profile_tab" width="25" height="25"/>

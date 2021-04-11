@@ -11,13 +11,10 @@ import MaterialComponents.MaterialButtons
 import Parse
 import Alamofire
 
-
-
 class HomeViewController: UIViewController, CLLocationManagerDelegate  {
 
     @IBOutlet weak var sentryButton: UIButton!
     @IBOutlet weak var secondsLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
     
     var timer = Timer()
     var manager = CLLocationManager()
@@ -34,6 +31,9 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate  {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.distanceFilter = kCLDistanceFilterNone
         manager.startUpdatingLocation()
+        
+        sentryButton.layer.cornerRadius = sentryButton.frame.width / 2
+        sentryButton.layer.masksToBounds = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,7 +82,6 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate  {
                 "coordinates": coordinate
             ]
         ]
-        
         AF.request("http://192.168.0.23:3000/sendText", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
             }
@@ -202,10 +201,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate  {
         longitude = "\(first.coordinate.longitude)"
         latitude = "\(first.coordinate.latitude)"
         coordinate = "\(latitude),\(longitude)"
-        locationLabel.text = coordinate
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        stopTimer()
         if segue.identifier == "cancelCallSegue" {
             let destination = segue.destination as! CancelCallViewController
             destination.addressText = self.addressString
