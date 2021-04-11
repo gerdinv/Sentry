@@ -30,16 +30,12 @@ BIT CAMP 2021
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -54,12 +50,12 @@ Sentry is an app that uses the Courier API to send texts to a designated list of
 We noticed a lack of applications that utilized a phone’s capabilities in geolocation and communication software in a manner that protects the phone user in dangerous situations. We aimed to make an app that utilizes this software to give people a sense of security.
 
 
-###What we learned:
+### What we learned:
 * Technologies such as Geotechnologies and Courier
 * How to connect a JS backend to a Swift application
 * Collaborating on tasks help us get more work done
 
-###Challenges:
+### Challenges:
 * Connecting to the backend to the Swift application.
 * Geodecoding map values to produce a valid readable street address
 
