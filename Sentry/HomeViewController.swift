@@ -36,6 +36,16 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate  {
         sentryButton.layer.cornerRadius = sentryButton.frame.width / 2
         sentryButton.layer.masksToBounds = true
         cancelButton.layer.cornerRadius = 8
+        
+        sentryButton.layer.shadowColor = UIColor.black.cgColor
+        sentryButton.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
+        sentryButton.layer.masksToBounds = false
+        sentryButton.layer.shadowRadius = 2.0
+        sentryButton.layer.shadowOpacity = 0.5
+        sentryButton.layer.borderColor = UIColor.black.cgColor
+        sentryButton.layer.borderWidth = 2.0
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

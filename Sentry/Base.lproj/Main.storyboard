@@ -336,7 +336,7 @@
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="75.669642857142847"/>
         </scene>
-        <!--Item 2-->
+        <!--Contacts View Controller-->
         <scene sceneID="VtZ-Kn-ZAb">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="poA-iC-zXA" customClass="ContactsViewController" customModule="Sentry" customModuleProvider="target" sceneMemberID="viewController">
@@ -431,7 +431,7 @@
                             <constraint firstItem="sMG-Zf-3NL" firstAttribute="trailing" secondItem="fdJ-NX-yNf" secondAttribute="trailing" id="paS-Rx-aeA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="vFk-gx-U0O"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.3" catalog="system" id="vFk-gx-U0O"/>
                     <connections>
                         <outlet property="tableView" destination="sMG-Zf-3NL" id="gnh-9Q-334"/>
                     </connections>
@@ -522,7 +522,7 @@
             </objects>
             <point key="canvasLocation" x="1831.8840579710147" y="1668.75"/>
         </scene>
-        <!--Item-->
+        <!--Update Profile View Controller-->
         <scene sceneID="uJY-Zm-fRa">
             <objects>
                 <viewController id="aag-2I-OCx" customClass="UpdateProfileViewController" customModule="Sentry" customModuleProvider="target" sceneMemberID="viewController">
@@ -549,15 +549,15 @@
                                     <outletCollection property="gestureRecognizers" destination="nSP-qB-etZ" appends="YES" id="LuY-dM-lbR"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eye color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jei-gf-3Je">
-                                <rect key="frame" x="199" y="122" width="85" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxu-gw-h3Y">
+                                <rect key="frame" x="199" y="96" width="175" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" name="DarkBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-93-Dug">
-                                <rect key="frame" x="297" y="122" width="97" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eye color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jei-gf-3Je">
+                                <rect key="frame" x="199" y="122" width="85" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" name="DarkBlue"/>
@@ -633,6 +633,9 @@
                                 <rect key="frame" x="52" y="319" width="324" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="DarkBlue"/>
+                                <connections>
+                                    <action selector="onSlider:" destination="aag-2I-OCx" eventType="valueChanged" id="fG6-91-FNN"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seconds:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPq-rA-J3y">
                                 <rect key="frame" x="273" y="304" width="71" height="21"/>
@@ -642,14 +645,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cj4-HM-nRh">
-                                <rect key="frame" x="352" y="304" width="33" height="21"/>
+                                <rect key="frame" x="352" y="304" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" name="DarkBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxu-gw-h3Y">
-                                <rect key="frame" x="199" y="96" width="175" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6U-0i-qRT">
+                                <rect key="frame" x="47" y="573" width="316" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="DarkBlue"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onUpdate:" destination="aag-2I-OCx" eventType="touchUpInside" id="n4g-cP-4FB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-93-Dug">
+                                <rect key="frame" x="286" y="122" width="97" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" name="DarkBlue"/>
@@ -659,7 +673,7 @@
                         <viewLayoutGuide key="safeArea" id="VEJ-Xm-AHY"/>
                         <color key="backgroundColor" red="0.89804762599999999" green="0.89802831409999995" blue="0.8980320692" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="DND-lz-FQt"/>
+                    <tabBarItem key="tabBarItem" title="" image="rectangle.and.pencil.and.ellipsis.rtl" catalog="system" id="DND-lz-FQt"/>
                     <connections>
                         <outlet property="addressLabel" destination="6Yw-U8-CZG" id="sfV-ea-4Ou"/>
                         <outlet property="eyeColorDropDown" destination="aHA-t8-tKt" id="nVL-WH-aN8"/>
@@ -672,6 +686,7 @@
                         <outlet property="heightLabel" destination="njp-y1-COF" id="MCA-lh-vgQ"/>
                         <outlet property="profileImage" destination="lhL-xZ-ryV" id="ygf-eB-IcL"/>
                         <outlet property="secondsLabel" destination="Cj4-HM-nRh" id="oS8-mr-tEg"/>
+                        <outlet property="updateButton" destination="e6U-0i-qRT" id="Jhp-Ra-pw5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODV-g6-6AP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -683,7 +698,7 @@
             </objects>
             <point key="canvasLocation" x="3169.5652173913045" y="1658.7053571428571"/>
         </scene>
-        <!--Item 1-->
+        <!--Home View Controller-->
         <scene sceneID="3ri-0Z-BDh">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="Qzo-G4-UBq" customClass="HomeViewController" customModule="Sentry" customModuleProvider="target" sceneMemberID="viewController">
@@ -718,14 +733,14 @@
                                 <rect key="frame" x="132" y="170" width="151" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="DarkBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ngU-4A-m5q"/>
                         <color key="backgroundColor" red="0.89804762599999999" green="0.89802831409999995" blue="0.8980320692" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="7Qd-I6-xXb"/>
+                    <tabBarItem key="tabBarItem" title="" image="lock" catalog="system" id="7Qd-I6-xXb"/>
                     <connections>
                         <outlet property="cancelButton" destination="j9M-Ly-7Y6" id="MwY-UL-R88"/>
                         <outlet property="secondsLabel" destination="TuX-SL-gRc" id="GAB-uh-HbL"/>
@@ -748,6 +763,7 @@
                                 <rect key="frame" x="82" y="251" width="250" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="DarkerGray"/>
+                                <color key="textColor" name="DarkBlue"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -820,10 +836,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RgC-5f-JTY"/>
+        <segue reference="erI-al-P3W"/>
+        <segue reference="XO3-nR-JZB"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="lock" catalog="system" width="128" height="128"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="profile_tab" width="25" height="25"/>
+        <image name="rectangle.and.pencil.and.ellipsis.rtl" catalog="system" width="128" height="92"/>
         <image name="sentryLogo" width="346" height="381"/>
         <namedColor name="DarkBlue">
             <color red="0.16300000250339508" green="0.20200000703334808" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

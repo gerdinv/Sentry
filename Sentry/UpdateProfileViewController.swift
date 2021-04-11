@@ -9,6 +9,7 @@ import UIKit
 import Parse
 import AlamofireImage
 import iOSDropDown
+import Parse
 
 class UpdateProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -25,18 +26,37 @@ class UpdateProfileViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var eyeColorDropDown: DropDown!
     @IBOutlet weak var hairColorDropDown: DropDown!
     @IBOutlet weak var secondsLabel: UILabel!
+    @IBOutlet weak var updateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        updateButton.layer.cornerRadius = 8
         profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
         profileImage.layer.borderColor = UIColor.black.cgColor
         profileImage.layer.borderWidth = 1
         profileImage.clipsToBounds = true
         initalizeEyeColorDD()
         initalizeHairColorDD()
+        updateLabelPlaceholders()
         loadUser()
         // Do any additional setup after loading the view.
+    }
+    
+    func updateLabelPlaceholders() {
+        
+        let address = NSAttributedString(string: "Full Address",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        fullAddressTextField.attributedPlaceholder = address
+        
+        
+        let eyeColor = NSAttributedString(string: "Eye Color",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        eyeColorDropDown.attributedPlaceholder = eyeColor
+        
+        let hairColor = NSAttributedString(string: "Hair Color",
+                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        hairColorDropDown.attributedPlaceholder = hairColor
     }
 
     @IBAction func onCameraButton(_ sender: Any) {
@@ -72,6 +92,39 @@ class UpdateProfileViewController: UIViewController, UIImagePickerControllerDele
         hairColorLabel.text = (hairColor as! String)
         secondsLabel.text = "\(timer!)"
 //        timerSlider.setValue(timer, animated: false)
+    }
+    
+    @IBAction func onSlider(_ sender: UISlider) {
+        secondsLabel.text = "\(Int(sender.value))"
+    }
+    
+    @IBAction func onUpdate(_ sender: Any) {
+        let user = PFUser.current()!
+        let imageData = profileImage.image!.pngData()
+        let imageFile = PFFileObject(data: imageData!)
+            
+        user["profileImage"] = imageFile
+        user["timer"] = Int(secondsLabel.text!)
+        user["address"] = fullAddressTextField.text
+        user["eyeColor"] = eyeColorLabel.text
+        user["hairColor"] = hairColorLabel.text
+        
+        user.saveInBackground { (success, error) in
+            if success {
+                   let alert = UIAlertController(title: "Updated Profile Successfully!", message: "Your profile has now been updated.", preferredStyle: .alert)
+                   alert.addAction(UIAlertAction(title: "dismiss", style: .default, handler: nil))
+                
+                self.loadUser()
+                   self.present(alert, animated: true)
+                   
+               } else {
+                   let alert = UIAlertController(title: "Error updating profile", message: "There was an error updating your profile. Please try again later.", preferredStyle: .alert)
+                   alert.addAction(UIAlertAction(title: "dismiss", style: .default, handler: nil))
+                   self.present(alert, animated: true)
+                   print("ERROR! \(String(describing: error))")
+               }
+        }
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
